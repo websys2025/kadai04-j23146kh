@@ -37,6 +37,9 @@
 
                     // 配列の内容を項目毎に出力
                     // 課題4-1. ここにコードを書く
+                    for (let i=0;i<list.length;i++){
+                    console.log("あああ" + list[i].name + "いいい");
+                    }
                     console.log(""); // 空行の出力
                 }
                 
@@ -45,6 +48,8 @@
                     if (this.stock >= 1) { 
                         console.log("商品番号: "+this.id+", 商品名: "+this.name+"を購入します。");
                         // 課題4-2. ここにコードを書く
+                        
+                            
                         // 購入による商品の在庫削減処理
                         
                         // 課題4-3. ここにコードを書く
@@ -62,9 +67,16 @@
             const btn = new Array(items.length);
 
             // 課題4-1. ここにコード書く
+            
+              for (let i=0;i<items.length;i++){
+                  item_list[i] = new Item( items[i].name, items[i].price, items[i].stock );
+              }
             // 商品オブジェクトの生成
-
             // 課題4-2. ここにコードを書く
+            for (let i=0;i<items.length;i++){
+                itemArea.innerHTML += <tr>"<td>iii</td>""<td>Item_list[i].name</td>"</tr>;
+            }
+                
             // 商品表の作成
 
             // クリックイベント時の購入処理の設定

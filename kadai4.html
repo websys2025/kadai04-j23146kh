@@ -51,7 +51,10 @@
                         this.stock -=1;
                             
                         // 購入による商品の在庫削減処理
-                        
+                        cost stocksyori =
+                            doucument.getElementByID("stock" + this.id);
+                        if(stocksyori){
+                            stocksyori.textCount = this.stock + "個";
                         // 課題4-3. ここにコードを書く
                         // 在庫用のエレメントを抽出し、HTML内の個数を更新
                     } else console.log(this.name+"は商品の在庫がないため購入できません。");
@@ -88,10 +91,11 @@
             // クリックイベント時の購入処理の設定
             for (let i=0; i<item_list.length; i++) {
                 // 課題4-3. ここにコードを書く
+                
                 // 課題4-1, 4-2のコードが完成したら、以下のコメントを外す
-                //document.getElementById("button"+item_list[i].id).onclick = () => {
-                  //  item_list[i].buyItem();
-                //}
+                document.getElementById("button"+item_list[i].id).onclick = () => {
+                   item_list[i].buyItem();
+                }
             }
             Item.showItemList(item_list);
 
